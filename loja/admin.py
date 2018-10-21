@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from loja.models import Produto
+
+
+class ProdutoAdmin(admin.ModelAdmin):
+    list_display = ('atributos', 'criado_em', 'modificado_em')
+
+
+admin.site.register(Produto, ProdutoAdmin)
