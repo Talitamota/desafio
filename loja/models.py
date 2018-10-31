@@ -7,3 +7,6 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.atributos
+
+class Foto(models.Model):
+    imagem = models.ImageField(upload_to='imagem/')

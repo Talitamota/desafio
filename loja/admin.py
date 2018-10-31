@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from loja.models import Produto
+from loja.models import Produto, Foto
 
 
 class ProdutoAdmin(admin.ModelAdmin):
@@ -8,3 +8,4 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Produto, ProdutoAdmin)
+admin.site.register(Foto)
