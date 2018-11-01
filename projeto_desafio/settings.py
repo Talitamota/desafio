@@ -70,7 +70,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'projeto_desafio.wsgi.application'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
