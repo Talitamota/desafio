@@ -13,5 +13,5 @@ class Foto(models.Model):
 
 class Loja(models.Model):
     nome = models.CharField(max_length=100)
-    url = models.UrlField()
+    url = models.URLField()
     logo =models.ImageField(upload_to='logo/')
