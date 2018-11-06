@@ -10,3 +10,8 @@ class Produto(models.Model):
 
 class Foto(models.Model):
     imagem = models.ImageField(upload_to='imagem/')
+
+class Loja(models.Model):
+    nome = models.CharField(max_length=100)
+    url = models.UrlField()
+    logo =models.ImageField(upload_to='logo/')
