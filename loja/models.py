@@ -26,16 +26,8 @@ class Loja(models.Model):
 class Pesquisa(models.Model):
     loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
     produto = models.ManyToManyField(Produto)
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    criado_em = models.DateField('data de criação', auto_now_add=True)
 
     def __str__(self):
-        return self.loja
-
-
-
-'''
-Pesquisa com os atributos:
-  loja = referencia para o modelo Loja
-  produto = referencia para produto
-  preco = campo decimal
-  criado_em = compo data configurado para salvar a data do momento que é criado
-'''
+        return str(self.loja)
