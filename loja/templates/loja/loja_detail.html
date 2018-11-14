@@ -5,6 +5,6 @@
     <title></title>
   </head>
   <body>
-    {{ loja.nome }}
+    {{ loja.nome }} <a href="{% url 'loja:delete' loja.id %}"><input type="button" value="Apagar"></a>
   </body>
 </html>

@@ -7,5 +7,6 @@ app_name = 'loja'
 urlpatterns = [
     path('',views.LojaListView.as_view(), name='list'),
     path('<int:loja_id>/', views.LojaDetailView.as_view(), name='detail'),
+    path('<int:loja_id>/delete/', views.LojaDeleteView.as_view(), name='delete'),
 
 ]
